@@ -1,7 +1,9 @@
 Index of Commands
 The file example file paths are from Windows 8.
 
+--------------------
 Setup and Config
+--------------------
 
 config
 	Read & Write
@@ -32,7 +34,9 @@ config
 		
 help
 
+--------------------
 Getting and Creating Projects
+--------------------
 
 init
 	Create a local repository out of a local working directory
@@ -46,8 +50,10 @@ clone
 			$ git clone [git@github.com:shaunluttin/PracticeGit.git] practice
 			$ git clone [https://github.com/shaunluttin/PracticeGit.git] practicegit
 	
-
+--------------------
 Basic Snapshotting
+--------------------
+
 add
 status
 diff
@@ -55,7 +61,11 @@ commit
 reset
 rm
 mv
+
+--------------------
 Branching and Merging
+--------------------
+
 branch
 checkout
 merge
@@ -63,13 +73,21 @@ mergetool
 log
 stash
 tag
+
+--------------------
 Sharing and Updating Projects
+--------------------
+
 fetch
 pull
 push
 remote
 submodule
+
+--------------------
 Inspection and Comparison
+--------------------
+
 show
 log
 diff
@@ -80,7 +98,11 @@ am
 apply
 cherry-pick
 rebase
+
+--------------------
 Debugging
+--------------------
+
 bisect
 blame
 Email
@@ -92,7 +114,11 @@ request-pull
 External Sytems
 svn
 fast-import
+
+--------------------
 Administration
+--------------------
+
 clean
 gc
 fsck
@@ -100,6 +126,10 @@ reflog
 filter-branch
 instaweb
 archive
+
+--------------------
 Server Admin
+--------------------
+
 daemon
 update-server-info
