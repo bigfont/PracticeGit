@@ -1,0 +1,93 @@
+Index of Commands
+The file example file paths are from Windows 8.
+
+Setup and Config
+
+config
+	Read & Write
+		Each level overrides the previous level.
+			default 
+				to .git/config eg C:\Users\Shaun\Documents\GitHub\BigFont\.git\config
+			--global 
+				to ~/.gitconfig eg C:\Users\Shaun\.gitconfig
+			--system 
+				to /etc/gitconfig eg C:\Program Files (x86)\Git\etc\gitconfig
+	Your Identity
+			user.name “John Doe”
+			user.email johndoe@example.com
+	Your Editor
+			core.editor some-editor
+	Your Diff Tool
+			merge.tool some-merge-tool			
+	Check Your Settings
+			--list 
+				Keys that are listed in multiple files are duplicated in this display.
+			{key}
+				Display what Git thinks is the value of that key.
+	Examples
+			git config --global user.name "Shaun Luttin”
+			git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+			git config --global merge.tool "'C:\Program Files (x86)\KDiff3\kdiff3.exe'"
+			git config --list
+		
+help
+
+Getting and Creating Projects
+init
+clone
+Basic Snapshotting
+add
+status
+diff
+commit
+reset
+rm
+mv
+Branching and Merging
+branch
+checkout
+merge
+mergetool
+log
+stash
+tag
+Sharing and Updating Projects
+fetch
+pull
+push
+remote
+submodule
+Inspection and Comparison
+show
+log
+diff
+shortlog
+describe
+Patching
+am
+apply
+cherry-pick
+rebase
+Debugging
+bisect
+blame
+Email
+am
+apply
+format-patch
+send-email
+request-pull
+External Sytems
+svn
+fast-import
+Administration
+clean
+gc
+fsck
+reflog
+filter-branch
+instaweb
+archive
+Server Admin
+daemon
+update-server-info
