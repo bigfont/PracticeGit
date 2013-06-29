@@ -10,15 +10,6 @@ command
 	
 	#examples
 	$ git example
-
-command
-#command description
-
-	option
-	#option description	
-	
-	#examples
-	$ git example
 	
 ####################
 Setup and Config
