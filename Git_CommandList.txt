@@ -56,8 +56,14 @@ Basic Snapshotting
 --------------------
 
 add
+	Begin tracking a new file | stage modified files | mark merge conflicted files as resolved.
+			filename
 status
-	Determine which files are in which state.
+	Determine which files are in which state (untracked, staged, modified)
+	-untracked files (untracked)
+	-changes to be committed (staged)
+	-changed but not updated (modified)
+	-
 diff
 commit
 reset
