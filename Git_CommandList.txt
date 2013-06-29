@@ -64,6 +64,15 @@ status
 	-changes to be committed (staged)
 	-changed but not updated (modified)
 diff
+	Determine exact lines added and removed (show patches).
+	-What have you changed but not yet staged?
+	-What have you staged that you are about to commit?
+			default
+				compare working directory to staging area
+			--cached | --staged
+				compared staged to last commit
+				
+			
 commit
 reset
 rm
