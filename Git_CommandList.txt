@@ -1,37 +1,58 @@
-Index of Commands
-The file example file paths are from Windows 8.
+Index of Commands covered in the Pro Git book.
+The example file paths are from Windows 8.
+General format:
+
+command
+#command description
+#command description
+
+	option
+	#option description	
+	#option description	
+	
+	option
+	#option description	
+	#option description		
+	
+	#examples
+	$ git example
+	$ git example
 
 ####################
 Setup and Config
 ####################
 
-config
-	Configure your local git
-	Read & Write
-		Each level overrides the previous level.
-			default 
-				to .git/config eg C:\Users\Shaun\Documents\GitHub\BigFont\.git\config
-			--global 
-				to ~/.gitconfig eg C:\Users\Shaun\.gitconfig
-			--system 
-				to /etc/gitconfig eg C:\Program Files (x86)\Git\etc\gitconfig
-	Your Identity
-			user.name “John Doe”
-			user.email johndoe@example.com
-	Your Editor
-			core.editor some-editor
-	Your Diff Tool
-			merge.tool some-merge-tool			
-	Check Your Settings
-			--list 
-				Keys that are listed in multiple files are duplicated in this display.
-			{key}
-				Display what Git thinks is the value of that key.
-	Examples
-			$ git config --global user.name "Shaun Luttin”
-			$ git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
-			$ git config --global merge.tool "'C:\Program Files (x86)\KDiff3\kdiff3.exe'"
-			$ git config --list
+config 
+#configure your local git
+#by default reads & writes to .git/config eg C:\Users\Shaun\Documents\GitHub\BigFont\.git\config
+
+	--global 
+	#reads & writes to ~/.gitconfig eg C:\Users\Shaun\.gitconfig
+	
+	--system 
+	#reads & writes to /etc/gitconfig eg C:\Program Files (x86)\Git\etc\gitconfig
+	
+	user.name “John Doe”
+	user.email johndoe@example.com
+	#sets your identity
+	
+	core.editor some-editor
+	#sets your editor
+
+	merge.tool some-merge-tool		
+	#sets your merge tool
+
+	--list 
+	#shows all your config keys. keys that are listed in multiple files are duplicated in this display.
+	
+	{key}
+	#display what Git thinks is the value of that key.
+	
+	#Examples
+	$ git config --global user.name "Shaun Luttin”
+	$ git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+	$ git config --global merge.tool "'C:\Program Files (x86)\KDiff3\kdiff3.exe'"
+	$ git config --list
 		
 help
 
@@ -40,40 +61,52 @@ Getting and Creating Projects
 ####################
 
 init
-	Create a local repository out of a local working directory
-	Examples
-			$ git init
+#Create a local repository out of a local working directory
+
+	#examples
+	$ git init
+	
 clone
-	Start tracking a existing remote repository
-			[url]
-			targetdir
-	Examples
-			$ git clone [git@github.com:shaunluttin/PracticeGit.git] practice
-			$ git clone [https://github.com/shaunluttin/PracticeGit.git] practicegit
+#Start tracking a existing remote repository
+	
+	[url]
+	#the url from which to clone
+	
+	targetdir
+	#the name of the target directory
+	
+	#examples
+	$ git clone [git@github.com:shaunluttin/PracticeGit.git] someDirectory
+	$ git clone [https://github.com/shaunluttin/PracticeGit.git] 
 	
 ####################
 Basic Snapshotting
 ####################
 
 add
-	Begin tracking a new file | stage modified files | mark merge conflicted files as resolved.
+#Begin tracking a new file | stage modified files | mark merge conflicted files as resolved.
 			filename
 status
-	Determine which files (ignores empty folders) are in which state (untracked, staged, modified)
-	-untracked files (untracked)
-	-changes to be committed (staged)
-	-changed but not updated (modified)
+#Determine which files (ignores empty folders) are in which state (untracked, staged, modified)
+#-untracked files (untracked)
+#-changes to be committed (staged)
+#-changed but not updated (modified)
+
 diff
-	Determine exact lines added and removed (show patches).
-	-What have you changed but not yet staged?
-	-What have you staged that you are about to commit?
-			default
-				compare working directory to staging area
-			--cached | --staged
-				compared staged to last commit
-				
-			
+#Determine exact lines added and removed (show patches).
+#-What have you changed but not yet staged?
+#-What have you staged that you are about to commit?
+#by default default compares your working directory to staging area
+	
+	--cached | --staged
+	#compared staging area to last commit						
+	
 commit
+#Add staged files to the local repository
+	
+	-m "Example commit message."		
+	#add a commit message
+	
 reset
 rm
 mv
