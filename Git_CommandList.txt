@@ -115,11 +115,11 @@ blank lines or lines starting with # are ignored
 end patterns with a (/) to signify a directory, alone it signified root
 negate a pattern with an (!)
 standard glob patterns work
-	* 		zero or more characters
-	[abc]	any character inside the brackets
-	?		any single character
-	[0-9]	any range of numbers
-	[a-z]	any range of characters
+	* zero or more characters
+	[abc] any character inside the brackets
+	? any single character
+	[0-9] any range of numbers
+	[a-z] any range of characters
 	
 
 ####################
