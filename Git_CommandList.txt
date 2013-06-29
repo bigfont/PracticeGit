@@ -63,7 +63,6 @@ status
 	-untracked files (untracked)
 	-changes to be committed (staged)
 	-changed but not updated (modified)
-	-
 diff
 commit
 reset
