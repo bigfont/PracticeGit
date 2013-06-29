@@ -17,7 +17,7 @@ Setup and Config
 
 config 
 #configure your local git
-#by default reads & writes to .git/config eg C:\Users\Shaun\Documents\GitHub\BigFont\.git\config
+#by default reads & writes to .git/config of the current repository
 
 	--global 
 	#reads & writes to ~/.gitconfig eg C:\Users\Shaun\.gitconfig
