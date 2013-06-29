@@ -6,6 +6,7 @@ Setup and Config
 --------------------
 
 config
+	Configure your local git
 	Read & Write
 		Each level overrides the previous level.
 			default 
@@ -56,6 +57,7 @@ Basic Snapshotting
 
 add
 status
+	Determine which files are in which state.
 diff
 commit
 reset
