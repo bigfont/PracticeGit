@@ -4,20 +4,22 @@ General format:
 
 command
 #command description
+
+	option
+	#option description	
+	
+	#examples
+	$ git example
+
+command
 #command description
 
 	option
 	#option description	
-	#option description	
-	
-	option
-	#option description	
-	#option description		
 	
 	#examples
 	$ git example
-	$ git example
-
+	
 ####################
 Setup and Config
 ####################
