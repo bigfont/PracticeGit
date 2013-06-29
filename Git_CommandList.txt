@@ -25,16 +25,28 @@ config
 			{key}
 				Display what Git thinks is the value of that key.
 	Examples
-			git config --global user.name "Shaun Luttin”
-			git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
-			git config --global merge.tool "'C:\Program Files (x86)\KDiff3\kdiff3.exe'"
-			git config --list
+			$ git config --global user.name "Shaun Luttin”
+			$ git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+			$ git config --global merge.tool "'C:\Program Files (x86)\KDiff3\kdiff3.exe'"
+			$ git config --list
 		
 help
 
 Getting and Creating Projects
+
 init
+	Create a local repository out of a local working directory
+	Examples
+			$ git init
 clone
+	Start tracking a existing remote repository
+			[url]
+			targetdir
+	Examples
+			$ git clone [git@github.com:shaunluttin/PracticeGit.git] practice
+			$ git clone [https://github.com/shaunluttin/PracticeGit.git] practicegit
+	
+
 Basic Snapshotting
 add
 status
