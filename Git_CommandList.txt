@@ -1,6 +1,6 @@
 Index of Commands covered in the Pro Git book.
 The example file paths are from Windows 8.
-General format:
+General formatting of this document:
 
 command
 #command description
