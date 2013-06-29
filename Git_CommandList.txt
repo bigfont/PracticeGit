@@ -17,10 +17,11 @@ Setup and Config
 
 config 
 #configure your local git
+#config keys cascade such that more specific ones override more general ones
 #by default reads & writes to .git/config of the current repository
 
 	--global 
-	#reads & writes to ~/.gitconfig eg C:\Users\Shaun\.gitconfig
+	#reads & writes to ~/.gitconfig eg C:\Users\SomeUser\.gitconfig
 	
 	--system 
 	#reads & writes to /etc/gitconfig eg C:\Program Files (x86)\Git\etc\gitconfig
@@ -36,40 +37,42 @@ config
 	#sets your merge tool
 
 	--list 
-	#shows all your config keys. keys that are listed in multiple files are duplicated in this display.
+	#shows all your config keys. 
+	#keys that are in multiple config files are duplicated
 	
 	{key}
 	#display what Git thinks is the value of that key.
 	
 	#Examples
 	$ git config --global user.name "Shaun Luttin”
-	$ git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+	$ git config --system core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 	$ git config --global merge.tool "'C:\Program Files (x86)\KDiff3\kdiff3.exe'"
 	$ git config --list
 		
 help
+#show help for git
 
 ####################
 Getting and Creating Projects
 ####################
 
 init
-#Create a local repository out of a local working directory
+#create a local repository in the current directory
 
 	#examples
 	$ git init
 	
 clone
-#Start tracking a existing remote repository
+#start locally tracking an existing remote repository
 	
 	[url]
 	#the url from which to clone
 	
 	targetdir
-	#the name of the target directory
+	#the name of the target local directory to store the cloned files
 	
 	#examples
-	$ git clone [git@github.com:shaunluttin/PracticeGit.git] someDirectory
+	$ git clone [git@github.com:shaunluttin/PracticeGit.git] someLocalDirectory
 	$ git clone [https://github.com/shaunluttin/PracticeGit.git] 
 	
 ####################
@@ -78,17 +81,17 @@ Basic Snapshotting
 
 add
 #Begin tracking a new file | stage modified files | mark merge conflicted files as resolved.
-			filename
+
+	filename
+	#the name of the file to add
+
 status
-#Determine which files (ignores empty folders) are in which state (untracked, staged, modified)
-#-untracked files (untracked)
-#-changes to be committed (staged)
-#-changed but not updated (modified)
+#Determine which files (ignoring empty folders) are in which of the three states: untracked, modified, staged.
+#What have you changed but not yet staged?
+#What have you staged that you are about to commit?
 
 diff
-#Determine exact lines added and removed (show patches).
-#-What have you changed but not yet staged?
-#-What have you staged that you are about to commit?
+#Determine the exact modified lines (i.e. show patches).
 #by default default compares your working directory to staging area
 	
 	--cached | --staged
