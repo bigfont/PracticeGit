@@ -1,3 +1,4 @@
-
 Practice1
 The resolution.
+
+Dan edited the Practice1 text file on Saturday Jun 29th before supper.  This file is on the master branch and was edited via the GitHub web tool.
