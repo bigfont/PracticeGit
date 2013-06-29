@@ -1,9 +1,9 @@
 Index of Commands
 The file example file paths are from Windows 8.
 
---------------------
+####################
 Setup and Config
---------------------
+####################
 
 config
 	Configure your local git
@@ -35,9 +35,9 @@ config
 		
 help
 
---------------------
+####################
 Getting and Creating Projects
---------------------
+####################
 
 init
 	Create a local repository out of a local working directory
@@ -51,9 +51,9 @@ clone
 			$ git clone [git@github.com:shaunluttin/PracticeGit.git] practice
 			$ git clone [https://github.com/shaunluttin/PracticeGit.git] practicegit
 	
---------------------
+####################
 Basic Snapshotting
---------------------
+####################
 
 add
 	Begin tracking a new file | stage modified files | mark merge conflicted files as resolved.
@@ -69,9 +69,9 @@ reset
 rm
 mv
 
-####################
+--------------------
 Git Ignore Syntax
-####################
+--------------------
 
 blank lines or lines starting with # are ignored
 end patterns with a (/) to signify a directory, alone it signified root
@@ -84,9 +84,9 @@ standard glob patterns work
 	[a-z]	any range of characters
 	
 
---------------------
+####################
 Branching and Merging
---------------------
+####################
 
 branch
 checkout
@@ -96,9 +96,9 @@ log
 stash
 tag
 
---------------------
+####################
 Sharing and Updating Projects
---------------------
+####################
 
 fetch
 pull
@@ -106,9 +106,9 @@ push
 remote
 submodule
 
---------------------
+####################
 Inspection and Comparison
---------------------
+####################
 
 show
 log
@@ -121,9 +121,9 @@ apply
 cherry-pick
 rebase
 
---------------------
+####################
 Debugging
---------------------
+####################
 
 bisect
 blame
@@ -137,9 +137,9 @@ External Sytems
 svn
 fast-import
 
---------------------
+####################
 Administration
---------------------
+####################
 
 clean
 gc
@@ -149,9 +149,9 @@ filter-branch
 instaweb
 archive
 
---------------------
+####################
 Server Admin
---------------------
+####################
 
 daemon
 update-server-info
