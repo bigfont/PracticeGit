@@ -1,2 +1,17 @@
+q
+#exit the pager
+
+space
+#move the pager to the next screen
+
+ENTER + ENTER
+#exit a multi line command
+
 Add-Content
+#add content to a file
+
 Invoke-Item
+#open a file
+
+clear
+#clear the console window
