@@ -1,4 +1,4 @@
-Index of Commands covered in the Pro Git book.
+﻿Index of Commands covered in the Pro Git book.
 The example file paths are from Windows 8.
 General formatting of this document:
 
@@ -102,6 +102,9 @@ commit
 	
 	-m "Example commit message."		
 	#add a commit message
+
+	-a
+	#stage every file *that is already tracked* before doing the commit
 	
 reset
 rm
