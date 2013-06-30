@@ -108,6 +108,15 @@ commit
 	
 reset
 rm
+#stop tracking a file and delete it locally
+
+	-f 
+	#required if the file is currently staged
+	
+	--cached
+	#stop tracking a file without deleting it locally
+
+
 mv
 
 --------------------
