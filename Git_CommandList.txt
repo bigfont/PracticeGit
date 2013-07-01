@@ -186,6 +186,12 @@ log
 	--stat
 	#see some abbreviated stats with each commit (modified files, lines changed, lines added, lines removed)
 	
+	--graph
+	#TODO
+	
+	--author
+	#TODO
+	
 	--pretty
 	#change the log output format
 	
