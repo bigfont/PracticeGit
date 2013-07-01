@@ -173,24 +173,36 @@ mergetool
 #TODO
 
 log
-#look at the repo commit history, in reverse chrononological order
+#look at the repo commit history, in reverse chronological order
 #this will invoke your pager
 #in PowerShell ENTER moves down one line, SPACE moves one page, and (q) exits the pager to the prompt
 
 	-p 
 	#show the diff (aka patch) introducted in each commit
 	
+		--word-diff
+		#show the patch in word-diff format, whatever that means
+	
 	-2
 	#limit the output to the last 2 entries (or any number)
 	
 	--stat
-	#see some abbreviated stats with each commit (modified files, lines changed, lines added, lines removed)
+	#see some abbreviated stats with each commit (modified files, lines changed, lines added, lines removed)	
+	
+	--shortstat
+	#show only changed, insertions, deletions
 	
 	--graph
-	#TODO
+	#add an ASCII graph showing your branch and merge history
+	
+	--relative-date 
+	#show the date in words such as 78 minutes ago or two days ago. fun!
 	
 	--author
 	#TODO
+	
+	--oneline
+	#shorthard for --pretty=oneline --abbrev-commit
 	
 	--pretty
 	#change the log output format
@@ -212,6 +224,8 @@ log
 		
 		#examples (in ascending order of verbosity)
 		git log --pretty=format:"%an"
+		git log --pretty=format:"%an" --graph
+		git log --pretty=format:"%an" --stat
 		git log --pretty=oneline -2
 		git log --pretty=short -2
 		git log --pretty=full -2
