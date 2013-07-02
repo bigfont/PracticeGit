@@ -229,12 +229,27 @@ log
 	-2
 	#limit the output to the last 2 entries (or any number)
 
-	--since
-	#limit how far back in time to go
+	--since | --after
+	#the least recent date
 
-	--until
+		=2.weeks
+		=lots of formats
+
+	--until | --before
+	#the most recent date		
 
 	--author
+	#filter on a specific author
+
+	--grep
+	#search for keywords in the commit message
+
+	--all-match
+	#allows specifying both --author and --grep options
+
+	--some_directory_or_file_name
+	#limit the output to commits that involve that dir or file
+	#this is always the last option to use in a list of options
 
 
 stash
