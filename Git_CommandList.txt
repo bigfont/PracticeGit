@@ -283,9 +283,43 @@ Sharing and Updating Projects
 ####################
 
 fetch
+#recommended over pull
+#get data from a remote repository WITHOUT automatically merging it with ANY of your work
+
+
+	[remote-name]
+	
+	#examples
+	git fetch origin
+
 pull
+#get from from a remote repository AND automatically merge into your current branch
+
 push
+
+	[remote-name] [branch-name]	
+	
+	#examples
+	git push origin master #push your master branch to the origin's master branch
+	
+
 remote
+#see the short-names of the remote servers you have configured
+#origin is the default short-name of the repo from which you originally cloned
+
+	-v 
+	#also display the url
+	
+	show [remote-name]
+	#show information about the specified remote repository
+	
+	rename oldname newname
+	#rename the short-name of the specified remote repository
+	
+	rm [remote-name]
+	#remove a reference to a remote repository
+
+
 submodule
 
 ####################
