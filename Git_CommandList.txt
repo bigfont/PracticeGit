@@ -89,8 +89,11 @@ Basic Snapshotting
 add
 #Begin tracking a new file | stage modified files | mark merge conflicted files as resolved.
 
-	filename
+	some_filename
 	#the name of the file to add
+
+	*
+	#add all changed files to the index (aka to the staging area)	
 
 status
 #Determine which files (ignoring empty folders) are in which of the three states: untracked, modified, staged.
@@ -115,12 +118,21 @@ commit
 
 	-a
 	#stage every file *that is already tracked* before doing the commit
+
+	--amend
+	#overwrite the message of you last commit and/or add files to your last commit	
 	
 	#examples
 	$git commit -a -m "some message"
 	
 reset
-#TODO
+#unstage a file
+
+	HEAD some_filename
+	#unstage the specified file (yes, this is a strange command)
+
+	#examples
+	git reset HEAD instructions.txt
 
 rm
 #stop tracking a file and delete it locally
@@ -164,7 +176,10 @@ branch
 #TODO
 
 checkout
-#TODO
+#overwrite your working directory with the contents of the specified checkout
+
+	-- some_filename
+	#dangerous but useful command; reverts the specified file back to its last snapshot
 
 merge
 #TODO
