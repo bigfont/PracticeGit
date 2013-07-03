@@ -7,6 +7,12 @@ space
 ENTER + ENTER
 #exit a multi line command
 
+New-Item
+#create a new item
+	
+	-type file | directory
+	#specify item type	
+
 Add-Content
 #add content to a file
 
