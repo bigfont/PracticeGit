@@ -241,6 +241,9 @@ log
 	--author
 	#filter on a specific author
 
+	--committer
+	#filter on a specific committer
+
 	--grep
 	#search for keywords in the commit message
 
@@ -251,6 +254,8 @@ log
 	#limit the output to commits that involve that dir or file
 	#this is always the last option to use in a list of options
 
+gitk
+#open the visual git log tool that is distributed with kit
 
 stash
 #TODO
