@@ -192,12 +192,30 @@ standard glob patterns
 Branching and Merging
 ####################
 
-branch [branchName]
-#create a new pointer at the same commit you're currently on 
-#it does NOT automatically switch to that branch
+branch 
+#list the available branches
 
-	#notes
-	#HEAD  is a pointer to the local branch that you're currently on
+	[branchName]	
+	#create a new pointer at the same commit you're currently on 
+	#does NOT automatically switch to that branch
+	
+	-v 
+	#show the last commit on each branch
+	
+	-d [branchName]
+	#delete the specified branch
+	#will fail if the branch is not merged into the current branch
+	
+	-D [branchName]
+	#for the deletion of the specified branch
+	
+	--merged
+	#list all branches that are already merged into the current branch
+	#it is generally fine to delete the resulting branches
+	
+	--no-merged
+	#list all branches that are not yet merged into the current branch
+	#
 
 checkout
 #overwrite your working directory with the contents of the specified checkout
@@ -208,12 +226,19 @@ checkout
 	[someBranch]
 	#checkout that branch
 	#move HEAD to point to the specified branch
+	
+	-b [someBranch]
+	#create a branch and switch to it at the same time
 
 merge
-#TODO
 
-mergetool
-#TODO
+	[someBranch]
+	#merge the specified branch into the current branch
+	#git will automatically choose to do a fast-forward OR a three-way merge
+
+git mergetool
+#opens the configured merge tool
+#TODO - configure a merge tool
 
 log
 #look at the repo commit history, in reverse chronological order
