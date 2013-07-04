@@ -16,6 +16,16 @@ command
 	$ git example
 	
 ####################
+Tips and Tricks
+####################
+
+#auto-completion
+press the tab key when you're writing a Git subcommand OR option, and it should return a set of suggetsions from which to pick
+
+#git aliases
+create shorthand for common git subcommands OR !external commands
+	
+####################
 Setup and Config
 ####################
 
@@ -47,11 +57,21 @@ config
 	{key}
 	#display what Git thinks is the value of that key.
 	
+	alias
+	#setup a shorthand for common commands
+	
 	#Examples
 	$ git config --global user.name "Shaun Luttin”
 	$ git config --system core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 	$ git config --global merge.tool "'C:\Program Files (x86)\KDiff3\kdiff3.exe'"
 	$ git config --list
+	$ git config --global alias.co checkout
+	$ git config --global alias.br branch
+	$ git config --global alias.ci commit
+	$ git config --global alias.st status
+	$ git config --global alias.unstage 'reset HEAD --'
+	$ git config --global alias.last 'log -l 1 HEAD'
+	$ git config --global alias.visual "!gitk"
 		
 help
 #show help for git
@@ -276,7 +296,43 @@ stash
 #TODO
 
 tag
-#TODO
+#list the available tags in alpha order
+
+	-l 'some pattern'
+	#list tags that match a particular pattern
+	
+	-a [someTag] 
+	#create an annotated tag (recommended)
+	
+	-m 'some message'
+	#add a message to the annotated tag
+	
+	-s
+	#sign a tag with GPG (requires a private key)
+	
+	-v [someTag]
+	#verify a signed tag (requires the signer's public key in your keyring)
+	#convention suggests suffixing the tag with -lw
+	
+	[someTag]
+	#create a lightweight tag
+	
+	[someCommitSHA]
+	#tag a specific commit
+	
+	#related commands
+	
+	git push [remoteName] [tagName]
+	#push a tag to a remote (git push doesn't do this automatically)
+	
+	git push [remoteName] --tags
+	#transfer all your tags to the specified remote	
+	
+show
+#show the details of the git object
+
+		[sometag]
+		#show the tag data along with its associated commit
 
 ####################
 Sharing and Updating Projects
