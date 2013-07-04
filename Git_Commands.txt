@@ -192,14 +192,22 @@ standard glob patterns
 Branching and Merging
 ####################
 
-branch
-#TODO
+branch [branchName]
+#create a new pointer at the same commit you're currently on 
+#it does NOT automatically switch to that branch
+
+	#notes
+	#HEAD  is a pointer to the local branch that you're currently on
 
 checkout
 #overwrite your working directory with the contents of the specified checkout
 
 	-- some_filename
-	#dangerous but useful command; reverts the specified file back to its last snapshot
+	#reverts the specified file back to its last snapshot (dangerous but useful command)
+	
+	[someBranch]
+	#checkout that branch
+	#move HEAD to point to the specified branch
 
 merge
 #TODO
