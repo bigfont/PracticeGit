@@ -366,6 +366,32 @@ show
 
 		[sometag]
 		#show the tag data along with its associated commit
+		
+--------------------
+Branching Workflows
+--------------------		
+
+master branch
+-contains only entirely stable code
+-this code has or will be released
+
+develop (or next) branch
+-contains code from which we work or test for stability
+-merge into master when it's stable
+
+proposed (or pu for proposed updates) branch
+-for larger projects
+-integrates branches that might graduate to develop or master later
+
+topic branches
+-short lived branches for a particular feature
+-e.g. iss53, hotfix
+-
+-merge each into develop branch when each is ready
+
+general ideas
+-see each branch as a work silo
+-the closer a branch is to master, the stabler that branch is
 
 ####################
 Sharing and Updating Projects
