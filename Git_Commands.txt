@@ -221,18 +221,22 @@ checkout
 #overwrite your working directory with the contents of the specified checkout
 
 	-- some_filename
-	#reverts the specified file back to its last snapshot (dangerous but useful command)
+	#reverts the specified file back to its last snapshot (dangerous but useful command)	
 	
-	[someBranch]
+	[some-remote]/[someBranch]
 	#checkout that branch
 	#move HEAD to point to the specified branch
 	
 	-b [someBranch]
 	#create a branch and switch to it at the same time
+	
+	--track
+	#checkout a remote branch and start tracking it
+	#tracking it means creating a local branch with the same name, from which you can use the git push / git pull shorthand	
 
 merge
 
-	[someBranch]
+	[someremote]/[someBranch]
 	#merge the specified branch into the current branch
 	#git will automatically choose to do a fast-forward OR a three-way merge
 
@@ -400,9 +404,11 @@ Sharing and Updating Projects
 fetch
 #recommended over pull
 #get data from a remote repository WITHOUT automatically merging it with ANY of your work
-
+#i.e. updates your local [remote-name]/[branchname] pointer to match the remote 
 
 	[remote-name]
+	
+	[remote-name]/[branchname]
 	
 	#examples
 	git fetch origin
@@ -413,9 +419,16 @@ pull
 push
 
 	[remote-name] [branch-name]	
+	#push the specified local branch to the specified remote
+	
+	[remote-name] [local-branch-name]:[remote-branch-name]
+	#push the specified local branch to the specified remote, and name the branch something different on the remote
+	#use a blank [local-branch-name] if you want to delete a [remote-branch-name]
 	
 	#examples
-	git push origin master #push your master branch to the origin's master branch
+	git push origin master
+	git push origin master:superstar
+	git push origin  :deleteme
 	
 
 remote
@@ -442,15 +455,25 @@ Inspection and Comparison
 ####################
 
 show
+
 log
+
 diff
+
 shortlog
+
 describe
+
 Patching
+
 am
+
 apply
+
 cherry-pick
+
 rebase
+#only use rebase if there is a clear reason to do so
 
 ####################
 Debugging
