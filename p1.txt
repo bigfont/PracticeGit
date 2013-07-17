@@ -4,3 +4,5 @@ The resolution.
 Dan edited the Practice1 text file on Saturday Jun 29th before supper.  This file is on the master branch and was edited via the GitHub web tool.
 Shaun changed the name of Practice1 to p1.
 Shaun also edited the Practice1 text file on Sunday Jun 30th before supper.  This file is on the master branch and was edited via notepad.
+
+Hi this is Kathryn now. Bwaa ha ha ha.
